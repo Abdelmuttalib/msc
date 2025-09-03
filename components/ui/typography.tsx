@@ -26,7 +26,7 @@ interface TypographyProps
   variant?: `${FontSize}/${FontWeight}`;
 }
 
-const typographyVariants = cva("font-normal  text-foreground", {
+const typographyVariants = cva("font-normal text-foreground", {
   variants: {
     variant: {
       // xs
