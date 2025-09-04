@@ -209,7 +209,7 @@ function MSC() {
                       description: "Serving EU, USA, India, Africa",
                     },
                   ].map((s) => (
-                    <div>
+                    <div key={s.heading}>
                       <Typography
                         variant="3xl/semibold"
                         className="text-[#1d3d3e] tracking-tight"
