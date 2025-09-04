@@ -95,7 +95,7 @@ function MSC() {
         {/* About */}
         <Section>
           <PageContainer className="flex flex-col gap-12 items-center">
-            <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-5">
+            <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-6">
               <div className="col-span-5 lg:col-span-3">
                 <div className="flex flex-col gap-10">
                   <SectionTag id="about" className="">
@@ -160,8 +160,72 @@ function MSC() {
                   </div>
                 </div>
               </div>
-              {/* <div className="col-span-5 lg:col-span-2">
-                <div className="bg-[#a6ff79]">
+
+              <div className="col-span-5 lg:col-span-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 lg:gap-10 gap-6 flex-wrap">
+                  {[
+                    // {
+                    //   heading: "$240M",
+                    //   description: "Phase 1 investment by 2027",
+                    // },
+                    {
+                      heading: "$1.7B",
+                      description: "Total planned investment by 2035",
+                    },
+                    {
+                      heading: "1.2 GW",
+                      description: "Initial annual production capacity",
+                    },
+                    // {
+                    //   heading: "10 GW",
+                    //   description: "Target capacity in medium term",
+                    // },
+                    {
+                      heading: ">24.8%",
+                      description: "HJT cell efficiency achieved",
+                    },
+                    {
+                      heading: "76%+",
+                      description: "Local manufacturing integration in Morocco",
+                    },
+                    // {
+                    //   heading: "4,000+",
+                    //   description: "Jobs created in Phase 1",
+                    // },
+                    // {
+                    //   heading: "17,600+",
+                    //   description: "Jobs created by Phase 2 & 3 expansion",
+                    // },
+                    {
+                      heading: "1st in Africa, EU & MENA",
+                      description: "Fully integrated PV production",
+                    },
+                    // {
+                    //   heading: "300 mm / 230 mm",
+                    //   description: "Next-gen ingots and wafers sizes",
+                    // },
+                    {
+                      heading: "Global Exports",
+                      description: "Serving EU, USA, India, Africa",
+                    },
+                  ].map((s) => (
+                    <div>
+                      <Typography
+                        variant="3xl/semibold"
+                        className="text-[#1d3d3e] tracking-tight"
+                      >
+                        {s.heading}
+                      </Typography>
+                      <Typography
+                        variant="lg/normal"
+                        className="text-[#1d3d3e]"
+                      >
+                        {s.description}
+                      </Typography>
+                    </div>
+                  ))}
+                </div>
+                {/* <div className="bg-[#a6ff79]">
                   <img
                     src="https://images.unsplash.com/photo-1643826884444-7cf7fd46c69f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt=""
@@ -178,8 +242,8 @@ function MSC() {
                       independence and sustainability.
                     </p>
                   </div>
-                </div>
-              </div> */}
+                </div> */}
+              </div>
               {/* <div className="col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-8 lg:grid-cols-4 sm:gap-4 lg:gap-2 xl:gap-4">
                 {[
                   {
