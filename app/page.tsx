@@ -1,7 +1,7 @@
 import { PageContainer } from "@/components/page-container";
 import { Typography } from "@/components/ui/typography";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
+import { CheckCircle2Icon, CheckIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -92,6 +92,149 @@ function MSC() {
             </PageContainer>
           </div>
         </div>
+        {/* About */}
+        <Section>
+          <PageContainer className="flex flex-col gap-12 items-center">
+            <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-5">
+              <div className="col-span-5 lg:col-span-3">
+                <div className="flex flex-col gap-10">
+                  <SectionTag id="about" className="">
+                    About
+                  </SectionTag>
+
+                  <div className="flex flex-col gap-6">
+                    <Typography
+                      variant="5xl/medium"
+                      className="tracking-tighter"
+                    >
+                      Pioneering Morocco’s Photovoltaic Industry
+                    </Typography>
+                    <Typography variant="lg/normal">
+                      MSC (Moroccan Solar Cells) is developing Morocco’s first
+                      large-scale solar PV manufacturing facilities, covering
+                      the full value chain: ingots, wafers, cells, and modules.
+                    </Typography>
+                    <div>
+                      <div className="flex gap-4 items-center relative bg-[#1d3d3e] max-w-lg">
+                        <div className="absolute w-full h-0.5 bg-[#a6ff79]"></div>
+                        <div className="z-10">
+                          <img
+                            src="/images/H2GEMINI-ppt.webp"
+                            alt=""
+                            className="w-full max-w-xs"
+                          />
+                        </div>
+                        <div className="relative size-12 bg-[#1d3d3e] inline-flex items-center justify-center text-white">
+                          <div className="absolute w-full h-0.5 bg-[#a6ff79]"></div>
+                          <div className="absolute w-full h-0.5 bg-[#a6ff79] rotate-90"></div>
+                          <div className="absolute w-full h-0.5 bg-[#a6ff79] rotate-45"></div>
+                          <div className="absolute w-full h-0.5 bg-[#a6ff79] -rotate-45"></div>
+                        </div>
+                        <div className="z-10 bg-[#1d3d3e]">
+                          <Typography
+                            variant="7xl/medium"
+                            className="tracking-tight text-[#a6ff79]"
+                          >
+                            MSC
+                          </Typography>
+                        </div>
+                      </div>
+                      <br />
+                      <Typography
+                        variant="2xl/medium"
+                        className="tracking-tight"
+                      >
+                        <span className="bg-[#1d3d3e] text-[#a6ff79]">
+                          In partnership with H2GEMINI (Germany)
+                        </span>
+                        , MSC is bringing advanced Heterojunction Technology
+                        (HJT) to Morocco,
+                      </Typography>
+                      <Typography variant="lg/normal" className="">
+                        enabling local production integration of over 76%. With
+                        an initial capacity of 1.2 GW, our goal is to scale up
+                        to 10 GW, creating thousands of jobs and positioning
+                        Morocco among the world’s top solar producers.
+                      </Typography>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="col-span-5 lg:col-span-2">
+                <div className="bg-[#a6ff79]">
+                  <img
+                    src="https://images.unsplash.com/photo-1643826884444-7cf7fd46c69f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""
+                    className="w-full"
+                  />
+                  <div className="p-6 flex flex-col gap-4">
+                    <LogoText />
+
+                    <p>
+                      At MSC, we are creating Morocco’s renewable future with
+                      world-class photovoltaic technology. Our production line
+                      delivers next-generation solar modules that are efficient,
+                      durable, and locally manufactured — supporting energy
+                      independence and sustainability.
+                    </p>
+                  </div>
+                </div>
+              </div> */}
+              {/* <div className="col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-8 lg:grid-cols-4 sm:gap-4 lg:gap-2 xl:gap-4">
+                {[
+                  {
+                    img: "https://moroccan-solar-cells.com/wp-content/uploads/2024/02/add613f9-445e-4924-a817-e93fc34d4aa0-scaled-e1708698047702.jpg",
+                    process: "Cristalisation",
+                    description:
+                      "With christalisation pullers high-purity silicon is grown to produce wafers.",
+                  },
+                  {
+                    img: "https://moroccan-solar-cells.com/wp-content/uploads/2024/02/312da068-5e78-4ef9-a923-562e8045cb60-e1708697943670.jpg",
+                    process: "Wafering",
+                    description:
+                      "The high-purity silicon is cut into thin wafers using wire saws.",
+                  },
+                  {
+                    img: "https://moroccan-solar-cells.com/wp-content/uploads/2024/02/d15c0954-1aff-4081-a8cf-633c4b510dca-e1708697904572.jpg",
+                    process: "Cell manufacturing",
+                    description:
+                      "By applying different thin layers, the wafer becomes a photovoltaic cell that can generate electricity from light.",
+                  },
+                  {
+                    img: "https://moroccan-solar-cells.com/wp-content/uploads/2024/02/3kxpy-2prl0-e1708698106933.jpg",
+                    process: "Module Manufacturing",
+                    description:
+                      "BThe cells are laminated in strings to form a module, creating a resistant and powerful end product.",
+                  },
+                ].map((j, i) => (
+                  <div
+                    key={j.process}
+                    className="relative col-span-1 bg-[#1d3d3e] items-center justify-center"
+                  >
+
+                    <div className="absolute top-0 left-0 w-8 h-8 bg-[#a6ff79] grid grid-cols-3 grid-rows-3 gap-[0.5px] p-1">
+                      {Array.from({ length: 9 }).map((_, i) => (
+                        <div key={i} className="bg-emerald-800"></div>
+                      ))}
+                    </div>
+                    <img src={j.img} alt="" className="w-full" />
+                    <div className="p-4 xl:p-6 flex flex-col gap-2 text-white">
+                      <Typography
+                        variant="2xl/medium"
+                        className="text-[#a6ff79] tracking-tight"
+                      >
+                        {j.process}
+                      </Typography>
+                      <Typography variant="lg/normal" className="text-white">
+                        {j.description}
+                      </Typography>
+                    </div>
+                  </div>
+                ))}
+              </div> */}
+            </div>
+          </PageContainer>
+        </Section>
         {/* What we do */}
         <Section>
           <PageContainer className="flex flex-col gap-12 items-center">
@@ -219,6 +362,183 @@ function MSC() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </PageContainer>
+        </Section>
+        {/* Technology */}
+        <Section>
+          <PageContainer className="flex flex-col gap-12 items-center">
+            <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-5">
+              <div className="col-span-5 lg:col-span-3">
+                <div className="flex flex-col gap-10">
+                  <SectionTag id="technology" className="">
+                    Technology
+                  </SectionTag>
+
+                  <div className="flex flex-col gap-6">
+                    <Typography
+                      variant="5xl/medium"
+                      className="tracking-tighter"
+                    >
+                      Next-Generation HJT Solar Technology
+                    </Typography>
+                    <Typography variant="lg/normal">
+                      MSC’s production is based on Heterojunction Technology
+                      (HJT), one of the most efficient photovoltaic cell
+                      technologies available today.
+                    </Typography>
+                    <div>
+                      <div className="grid grid-cols-1 gap-2 md:gap-10 bg-white md:grid-cols-2 w-full text-left py-4">
+                        {[
+                          "Cell efficiency above 24.8%",
+                          "High bifaciality and long lifespan",
+                          "Lower levelised cost of energy (LCOE) compared to P-type cells",
+                          "Competitive beyond Asia’s economies of scale",
+                        ].map((j, i) => (
+                          <div key={j} className="bg-white flex flex-col">
+                            <span className="size-6 bg-[#1d3d3e] inline-flex items-center justify-center text-white">
+                              <CheckIcon className="w-5 h-5 text-[#a6ff79]" />
+                            </span>
+                            <div>
+                              <Typography
+                                variant="xl/medium"
+                                className="bg-[#1d3d3e] text-white p-2"
+                              >
+                                {j}
+                              </Typography>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* <div>
+                    <Button className="rounded-none text-base py-4 px-6">
+                      Get Started
+                    </Button>
+                  </div> */}
+                </div>
+              </div>
+              <div className="col-span-5 lg:col-span-2">
+                <div className="pt-8">
+                  <div className="flex items-end justify-end">
+                    <div className="aspect-square overflow-hidden bg-[#1d3d3e] p-2 outline-1 -outline-offset-1 outline-black/10">
+                      <img
+                        src="https://images.unsplash.com/photo-1689561799161-7d5852ee10a5?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt=""
+                        className="block size-full object-cover border-2 border-[#a6ff79]"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </PageContainer>
+        </Section>
+        {/* Technology */}
+        <Section>
+          <PageContainer className="flex flex-col gap-12 items-center">
+            <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-4">
+              <div className="col-span-5 lg:col-span-2">
+                <div className="flex flex-col gap-10">
+                  <SectionTag id="value" className="">
+                    Value
+                  </SectionTag>
+
+                  <div className="flex flex-col gap-6">
+                    <Typography
+                      variant="5xl/medium"
+                      className="tracking-tighter"
+                    >
+                      Made in Morocco,
+                      <br /> For the World
+                    </Typography>
+                    <Typography variant="2xl/normal">
+                      By localizing every step of production, MSC strengthens
+                      Morocco’s energy independence, creates local jobs, and
+                      offers high-quality solar technology to international
+                      markets.
+                    </Typography>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-span-5 lg:col-span-2">
+                <div className="grid grid-cols-1 md:grid-cols-1 w-full text-left py-4">
+                  {[
+                    {
+                      percentage: "100%",
+                      title: "Ingots",
+                      description: "made in Morocco.",
+                    },
+                    {
+                      percentage: "100%",
+                      title: "Wafers",
+                      description: "made in Morocco.",
+                    },
+                    {
+                      percentage: "100%",
+                      title: "Cells",
+                      description: "made in Morocco.",
+                    },
+                    {
+                      percentage: "76.7%",
+                      title: "Modules",
+                      description: "produced locally.",
+                    },
+                    // "Ingots: 100% made in Morocco",
+                    // "Wafers: 100% made in Morocco",
+                    // "Cells: 100% made in Morocco",
+                    // "Modules: 76.7% produced locally",
+                  ].map((j, i) => (
+                    <div
+                      key={j.title}
+                      className="bg-[#1d3d3e] border relative grid grid-cols-3"
+                    >
+                      {/* <span className="size-6 bg-[#1d3d3e] inline-flex items-center justify-center text-white">
+                              <CheckIcon className="w-5 h-5 text-[#a6ff79]" />
+                            </span> */}
+                      <div
+                        className={cn(
+                          "flex items-center justify-center bg-[#a6ff79]",
+                          {
+                            // "bottom-0": i < 2,
+                            // "top-0": i > 1,
+                            "order-last": i % 2 === 0,
+                            "left-0": i % 2 === 1,
+                          }
+                        )}
+                      >
+                        <Typography
+                          variant="4xl/semibold"
+                          className="text-[#1d3d3e] p-1"
+                        >
+                          {j.percentage}
+                        </Typography>
+                      </div>
+                      <div
+                        className={cn("col-span-2 p-6", {
+                          "": i % 2 === 1,
+                        })}
+                      >
+                        <Typography
+                          variant="3xl/semibold"
+                          className="text-white tracking-tight"
+                        >
+                          {j.title}
+                        </Typography>
+                        <Typography
+                          variant="2xl/medium"
+                          className="text-white tracking-tight"
+                        >
+                          {j.description}
+                        </Typography>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </PageContainer>
