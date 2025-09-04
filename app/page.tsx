@@ -1,6 +1,7 @@
 import { PageContainer } from "@/components/page-container";
 import { Typography } from "@/components/ui/typography";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -15,12 +16,12 @@ function MSC() {
     <div className="font-sans">
       <div>
         <div className="h-screen w-screen relative">
-          <div className="z-20 absolute w-full top-0 h-16 flex items-center justify-center bg-transparent backdrop-blur-xl">
+          <div className="z-30 w-full top-0 h-16 flex items-center justify-center bg-transparent backdrop-blur-xl sticky">
             <PageContainer className="flex items-center justify-between">
               <div className="flex items-center gap-x-6">
                 <h3 className="text-2xl font-bold uppercase tracking-tight text-white">
                   MSC
-                  <span className="ml-2 font-normal text-gray-300 text-xl">
+                  <span className="ml-2 font-normal text-gray-300 text-base sm:text-xl">
                     Moroccan Solar Cells
                     {/* Securico */}
                   </span>
@@ -29,11 +30,27 @@ function MSC() {
                   POS
                 </span> */}
               </div>
-              {/* <div className="flex items-center gap-x-10 text-sm text-white">
-                <Button className="rounded-none text-base py-4 px-6">
+              <div className="text-white hidden sm:flex sm:items-center">
+                {/* <nav className="flex items-center gap-6">
+                  {[
+                    {
+                      href: "#about",
+                      label: "About",
+                    },
+                    {
+                      href: "#team",
+                      label: "Team",
+                    },
+                  ].map((link, i) => (
+                    <Link key={link.label} href={link.href}>
+                      {link.label}
+                    </Link>
+                  ))}
+                </nav> */}
+                {/* <Button className="rounded-none text-base py-4 px-6">
                   Get Started
-                </Button>
-              </div> */}
+                </Button> */}
+              </div>
             </PageContainer>
           </div>
           <div className="bg-black absolute inset-0">
@@ -175,8 +192,18 @@ function MSC() {
                     key={j.process}
                     className="relative col-span-1 bg-[#1d3d3e] items-center justify-center"
                   >
-                    <div className="w-10 h-10 bg-[#a6ff79] absolute top-0 left-0 inline-flex items-center justify-center text-xl text-white">
-                      <div className="w-6 h-6 bg-emerald-800"></div>
+                    {/* <div className="w-10 h-10 bg-[#a6ff79] absolute top-0 left-0 items-center justify-center grid grid-cols-3">
+                      <div className="bg-emerald-800 size-3"></div>
+                      <div className="bg-emerald-800 size-3"></div>
+                      <div className="bg-emerald-800 size-3"></div>
+                      <div className="bg-emerald-800 size-3"></div>
+                      <div className="bg-emerald-800 size-3"></div>
+                      <div className="bg-emerald-800 size-3"></div>
+                    </div> */}
+                    <div className="absolute top-0 left-0 w-8 h-8 bg-[#a6ff79] grid grid-cols-3 grid-rows-3 gap-[0.5px] p-1">
+                      {Array.from({ length: 9 }).map((_, i) => (
+                        <div key={i} className="bg-emerald-800"></div>
+                      ))}
                     </div>
                     <img src={j.img} alt="" className="w-full" />
                     <div className="p-4 xl:p-6 flex flex-col gap-2 text-white">
@@ -196,22 +223,17 @@ function MSC() {
             </div>
           </PageContainer>
         </Section>
-        <Section className="bg-[#1d3d3e] text-white">
+        {/* <Section className="bg-[#1d3d3e] text-white">
           <PageContainer
-            // size="lg"
             size="md"
             className="flex flex-col gap-y-12 items-center"
           >
             <div className="text-center flex flex-col gap-12">
-              {/* <SectionTag id="what-we-do" className="bg-transparent">
-                What we do
-              </SectionTag> */}
               <Typography
                 variant="5xl/medium"
                 className="text-white tracking-tighter"
               >
-                We’re proud to advance renewable innovation, making a real
-                impact on communities and the environment.
+                The MSC Advantage
               </Typography>
 
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-3xl mx-auto w-full text-left">
@@ -228,13 +250,6 @@ function MSC() {
                     description:
                       "We bring every step of solar manufacturing — crystallization, wafering, cell, and module production — directly to Morocco.",
                   },
-                  //                   3. Global Expertise
-                  // International Team, Local Impact
-                  // Our experienced international network in the PV industry is building Morocco’s place in the global renewable energy market.
-
-                  // 4. Sustainable Growth
-                  // Driving Energy Independence
-                  // By producing high-efficiency solar technology locally, we reduce imports, strengthen Morocco’s economy, and cut carbon emissions.
                   {
                     title: "Global Expertise",
                     subtitle: "International Team, Local Impact",
@@ -255,7 +270,6 @@ function MSC() {
                       {
                         "border-b-0": i > 1,
                         "border-t-2": i > 1,
-                        // 'border-b-2': i !== 2
                       }
                     )}
                   >
@@ -281,15 +295,334 @@ function MSC() {
               </div>
             </div>
           </PageContainer>
+        </Section> */}
+        <Section className="relative bg-gray-100/70">
+          <PageContainer
+            size="xl"
+            className="flex flex-col gap-y-12 items-center"
+          >
+            <div className="text-center flex flex-col gap-16">
+              {/* <SectionTag id="what-we-do" className="bg-transparent">
+                What we do
+              </SectionTag> */}
+              <Typography
+                variant="5xl/medium"
+                className="text-[#1d3d3e] tracking-tighter"
+              >
+                The MSC Advantage
+                {/* We’re proud to advance renewable innovation, making a real
+                impact on communities and the environment. */}
+              </Typography>
+
+              <div className="grid grid-cols-1 gap-8 xl:grid-cols-2 text-left">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 w-full text-left">
+                  {[
+                    {
+                      title: "Local Manufacturing Power",
+                      subtitle: "1 GW Annual Production",
+                      description:
+                        "MSC is launching Morocco’s first photovoltaic module factory, starting with 1 GW capacity and scaling to 10 GW to meet global demand.",
+                    },
+                    {
+                      title: "Full Solar Value Chain",
+                      subtitle: "From Silicon to Module",
+                      description:
+                        "We bring every step of solar manufacturing — crystallization, wafering, cell, and module production — directly to Morocco.",
+                    },
+                    //                   3. Global Expertise
+                    // International Team, Local Impact
+                    // Our experienced international network in the PV industry is building Morocco’s place in the global renewable energy market.
+
+                    // 4. Sustainable Growth
+                    // Driving Energy Independence
+                    // By producing high-efficiency solar technology locally, we reduce imports, strengthen Morocco’s economy, and cut carbon emissions.
+                    {
+                      title: "Global Expertise",
+                      subtitle: "International Team, Local Impact",
+                      description:
+                        "Our experienced international network in the PV industry is building Morocco’s place in the global renewable energy market.",
+                    },
+                    {
+                      title: "Sustainable Growth",
+                      subtitle: "Driving Energy Independence",
+                      description:
+                        "By producing high-efficiency solar technology locally, we reduce imports, strengthen Morocco’s economy, and cut carbon emissions.",
+                    },
+                  ].map((j, i) => (
+                    <div
+                      key={j.title}
+                      className={cn(
+                        "relative p-4 bg-white border-b-2 border-[#a6ff79] flex flex-col gap-2"
+                      )}
+                    >
+                      <div className="size-6 bg-[#a6ff79] absolute top-0 right-0 inline-flex items-center justify-center text-xl text-white">
+                        <div className="absolute w-full h-0.5 bg-[#1d3d3e]"></div>
+                        <div className="absolute w-full h-0.5 bg-[#1d3d3e] rotate-90"></div>
+                        <div className="absolute w-full h-0.5 bg-[#1d3d3e] rotate-45"></div>
+                        <div className="absolute w-full h-0.5 bg-[#1d3d3e] -rotate-45"></div>
+                      </div>
+
+                      <div>
+                        <Typography
+                          className="text-[#1d3d3e] tracking-tight"
+                          variant="2xl/medium"
+                        >
+                          {i + 1}. {j.title}
+                        </Typography>
+                        <Typography
+                          className="text-[#1d3d3e]/70 tracking-tight"
+                          variant="xl/medium"
+                        >
+                          {j.subtitle}
+                        </Typography>
+                      </div>
+                      <Typography
+                        variant="base/normal"
+                        className="text-[#1d3d3e]"
+                      >
+                        {j.description}
+                      </Typography>
+                    </div>
+                    // <div
+                    //   key={j.title}
+                    //   className={cn(
+                    //     "relative p-6 border-b-2 border-[#a6ff79] bg-[#1d3d3e] flex flex-col gap-2",
+                    //     {
+                    //       "border-b-0": i > 1,
+                    //       "border-t-2": i > 1,
+                    //     }
+                    //   )}
+                    // >
+                    //   <div className="size-6 bg-[#a6ff79] absolute top-0 right-0 inline-flex items-center justify-center text-xl text-white">
+                    //     <div className="absolute w-full h-0.5 bg-[#1d3d3e]"></div>
+                    //     <div className="absolute w-full h-0.5 bg-[#1d3d3e] rotate-90"></div>
+                    //     <div className="absolute w-full h-0.5 bg-[#1d3d3e] rotate-45"></div>
+                    //     <div className="absolute w-full h-0.5 bg-[#1d3d3e] -rotate-45"></div>
+                    //   </div>
+
+                    //   <div>
+                    //     <Typography
+                    //       className="text-[#a6ff79] tracking-tight"
+                    //       variant="2xl/medium"
+                    //     >
+                    //       {j.title}
+                    //     </Typography>
+                    //     <Typography
+                    //       className="text-white tracking-tight"
+                    //       variant="xl/medium"
+                    //     >
+                    //       {j.subtitle}
+                    //     </Typography>
+                    //   </div>
+                    //   <Typography variant="base/normal" className="text-white">
+                    //     {j.description}
+                    //   </Typography>
+                    // </div>
+                  ))}
+                </div>
+                <div className="bg-[#1d3d3e] order-first xl:order-last">
+                  <img
+                    src="https://moroccan-solar-cells.com/wp-content/uploads/2025/01/13627641.jpeg"
+                    // src="https://images.unsplash.com/photo-1643826884444-7cf7fd46c69f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""
+                    className="w-full opacity-90"
+                  />
+                </div>
+              </div>
+            </div>
+          </PageContainer>
         </Section>
-        <Section className="relative text-white py-72 sm:py-72 md:py-64 lg:py-72 xl:py-80">
+        {/* <Section className="text-[#1d3d3e]">
+          <PageContainer
+            size="sm"
+            className="flex flex-col gap-12 items-center"
+          >
+            <div className="text-center flex flex-col gap-20">
+              <SectionTag id="team" className="bg-[#1d3d3e]">
+                Team
+              </SectionTag>
+              <Typography
+                variant="6xl/medium"
+                className="text-[#1d3d3e] tracking-tighter"
+              >
+                Our Team - Leadership Driving Morocco’s Solar Future
+              </Typography>
+
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                {[
+                  {
+                    name: "Ahmed Jaafar",
+                    title: "CEO",
+                    description: "Founder / CEO",
+                    image: "/images/ahmed-jaafar.webp",
+                  },
+                  {
+                    name: "Dr. Dirk Habermann",
+                    title: "CTO",
+                    description: "Founder / CTO",
+                    image: "/images/dr-dirk.webp",
+                  },
+                ].map((team) => (
+                  <div
+                    key={team.name}
+                    className="relative border-2 border-[#1d3d3e]"
+                  >
+                    <img
+                      src={team.image}
+                      alt=""
+                      className="w-full h-96 object-cover"
+                    />
+                    <div className="px-4 py-3 flex flex-col gap-1 absolute bottom-0 left-0 right-0 bg-[#1d3d3e]/50 backdrop-blur-xl text-left">
+                      <Typography
+                        variant="xl/medium"
+                        className="text-white tracking-tight"
+                      >
+                        {team.name}
+                      </Typography>
+
+                      <Typography variant="base/normal" className="text-white">
+                        {team.description}
+                      </Typography>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </PageContainer>
+        </Section> */}
+        <Section id={"team"} className="bg-[#1d3d3e]">
+          <PageContainer className="flex flex-col gap-12 items-center">
+            <div className="flex flex-col gap-16">
+              <div className="text-center flex flex-col items-center gap-4">
+                <SectionTag id="team" className="bg-[#1d3d3e] text-white">
+                  Team
+                </SectionTag>
+                <Typography
+                  variant="6xl/medium"
+                  className="text-white tracking-tighter"
+                >
+                  Our Team
+                </Typography>
+                {/* - Leadership Driving Morocco’s Solar Future */}
+              </div>
+              {/* <Typography variant="lg/normal" className="">
+                Discover sustainable solutions that reduce costs and
+                environmental impact. Take the first step today!
+              </Typography> */}
+              <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
+                <div className="flex flex-col gap-6">
+                  <Typography
+                    variant="5xl/medium"
+                    className="text-white tracking-tighter"
+                  >
+                    Leadership Driving Morocco’s{" "}
+                    <span className="text-[#a6ff79]">Solar </span>Future
+                  </Typography>
+
+                  <Typography
+                    variant="xl/normal"
+                    className="text-white tracking-tight max-w-lg"
+                  >
+                    Our leadership combines international expertise in
+                    photovoltaics with a deep commitment to Morocco’s renewable
+                    future.
+                    <br />
+                    <br />
+                    Together, they guide MSC in shaping a solar industry with
+                    both local impact and global reach.
+                  </Typography>
+
+                  {/* <div className="grid gap-4 py-4">
+                    {[
+                      "Proven international expertise in photovoltaics",
+                      "Commitment to Morocco’s renewable future",
+                      "Pioneering the nation’s first integrated solar value chain",
+                      "Driving innovation from silicon to solar modules",
+                    ].map((j, i) => (
+                      <div
+                        key={j}
+                        className="relative border-[#a6ff79] flex gap-2 items-center"
+                      >
+                        <div>
+                          <CheckCircle2Icon className="w-5 h-5 fill-current text-[#1d3d3e] stroke-[#a6ff79]" />
+                        </div>
+                        <div className="text-white">
+                          <p>{j}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div> */}
+                  {/* - Leadership Driving Morocco’s Solar Future */}
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-2 order-first lg:order-last">
+                  {[
+                    {
+                      name: "Ahmed Jaafar",
+                      title: "CEO",
+                      description: "Founder / CEO",
+                      image: "/images/ahmed-jaafar.webp",
+                    },
+                    {
+                      name: "Dr. Dirk Habermann",
+                      title: "CTO",
+                      description: "Founder / CTO",
+                      image: "/images/dr-dirk.webp",
+                    },
+                  ].map((team) => (
+                    <div
+                      key={team.name}
+                      className="relative border-2 border-[#1d3d3e]"
+                    >
+                      <div className="size-6 bg-white absolute bottom-0 right-0 inline-flex items-center justify-center text-xl text-white z-10">
+                        <div className="absolute w-full h-0.5 bg-[#1d3d3e]"></div>
+                        <div className="absolute w-full h-0.5 bg-[#1d3d3e] rotate-90"></div>
+                        <div className="absolute w-full h-0.5 bg-[#1d3d3e] rotate-45"></div>
+                        <div className="absolute w-full h-0.5 bg-[#1d3d3e] -rotate-45"></div>
+                      </div>
+
+                      <img
+                        src={team.image}
+                        alt=""
+                        className="w-full h-96 object-cover"
+                      />
+                      <div className="px-4 py-3 flex flex-col gap-1 absolute bottom-0 left-0 right-0 bg-[#1d3d3e]/50 backdrop-blur-xl text-left">
+                        <Typography
+                          variant="xl/medium"
+                          className="text-white tracking-tight"
+                        >
+                          {team.name}
+                        </Typography>
+                        {/* <Typography variant="lg/normal" className="text-white">
+                        {team.title}
+                      </Typography> */}
+                        <Typography
+                          variant="base/normal"
+                          className="text-white"
+                        >
+                          {team.description}
+                        </Typography>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </PageContainer>
+        </Section>
+        <Section className="relative text-white bg-black py-72 sm:py-72 md:py-64 lg:py-72 xl:py-80">
+          <div className="absolute top-0 left-0 w-full h-full bg-white/50 grid grid-cols-10 grid-rows-8 gap-[0.5px]">
+            {Array.from({ length: 80 }).map((_, i) => (
+              <div key={i} className="bg-black"></div>
+            ))}
+          </div>
           <img
-            src="https://images.unsplash.com/photo-1694327671697-730cc4c5b9e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            // src="https://images.unsplash.com/photo-1643826884444-7cf7fd46c69f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1474398777522-cabeb42e8132?q=80&w=2130&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            // src="https://images.unsplash.com/photo-1694327671697-730cc4c5b9e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             // src="https://images.unsplash.com/photo-1643826884444-7cf7fd46c69f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             // src="https://framerusercontent.com/images/I63aDOGkxJKmUUtuNtByyqTZAHU.jpg"
-            // src="https://images.unsplash.com/photo-1556742393-d75f468bfcb0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-top opacity-70"
           />
           <div className="size-full absolute inset-0 flex items-center justify-center">
             <PageContainer size="sm" className="flex flex-col gap-4">
@@ -297,7 +630,8 @@ function MSC() {
                 variant="6xl/medium"
                 className="text-white tracking-tighter"
               >
-                Join the renewable energy innocation with MSC.
+                Join the renewable energy innovation with{" "}
+                <span className="text-[#a6ff79]">MSC</span>.
               </Typography>
               <Typography variant="lg/normal" className="text-white">
                 Discover sustainable solutions that reduce costs and
@@ -312,15 +646,20 @@ function MSC() {
                   "Sustainability",
                   "Made in Morocco",
                   "Future of Energy",
-                  "Next-Gen Modules",
                   "Crystallization & Wafering",
                   "Global Expertise",
                   "Local Impact",
                 ].map((j, i) => (
                   <span
                     key={`${j}${i}`}
-                    className="text-white px-2.5 py-1.5 backdrop-blur-xl border border-white/15"
+                    className="relative text-white px-2.5 py-1.5 backdrop-blur-xl border border-white/15"
                   >
+                    {/* <div className="size-2.5 bg-[#a6ff79] absolute bottom-0 right-0 inline-flex items-center justify-center text-xl text-white">
+                      <div className="absolute w-full h-px bg-[#1d3d3e]"></div>
+                      <div className="absolute w-full h-px bg-[#1d3d3e] rotate-90"></div>
+                      <div className="absolute w-full h-px bg-[#1d3d3e] rotate-45"></div>
+                      <div className="absolute w-full h-px bg-[#1d3d3e] -rotate-45"></div>
+                    </div> */}
                     {j}
                   </span>
                 ))}
@@ -328,16 +667,16 @@ function MSC() {
             </PageContainer>
           </div>
         </Section>
-        <footer className="bg-white relative overflow-hidden">
-          <div className="mx-auto w-full max-w-screen-xl p-4 py-10 lg:py-20 relative">
-            <h5 className="absolute bottom-0 right-0 text-[#1d3d3e]/10 w-full h-full z-10 text-[20rem] md:text-[26rem]">
+        <footer className="relative overflow-hidden bg-white">
+          <PageContainer className="py-10 lg:py-28 pb-10 lg:pb-16 relative">
+            <h5 className="absolute bottom-0 right-0 text-[#a6ff79]/30 via-[#a6ff79]/40 w-full h-full z-10 text-[20rem] md:text-[26rem]">
               MSC
             </h5>
             <div className="md:flex md:justify-between">
               <div className="mb-6 md:mb-0">
                 <p className="flex items-center text-3xl uppercase font-semibold tracking-tighter">
                   MSC
-                  <span className="ml-2 text-xl font-medium tracking-tighter text-lime-700">
+                  <span className="ml-2 text-xl font-medium tracking-tighter text-[#1d3d3e]/70">
                     Moroccan Solar Cells
                   </span>
                 </p>
@@ -466,7 +805,7 @@ function MSC() {
                 </a>
               </div>
             </div>
-          </div>
+          </PageContainer>
         </footer>
       </div>
     </div>
@@ -492,12 +831,15 @@ function LogoText({
 
 function SectionTag({ id, className, ...props }: SectionProps) {
   return (
-    <Typography
-      variant="sm/normal"
-      className="p-2 bg-lime-100 inline-block"
-      id={id}
-      {...props}
-    />
+    <div className="flex items-center gap-2">
+      <div className="size-3 bg-[#a6ff79]"></div>
+      <Typography
+        variant="sm/normal"
+        className={cn("uppercase", className)}
+        id={id}
+        {...props}
+      />
+    </div>
   );
 }
 
@@ -510,7 +852,7 @@ function Section({ id, className, ...props }: SectionProps) {
   return (
     <section
       id={id || ""}
-      className={cn("bg-white py-16 sm:py-28 lg:py-40 xl:py-56", className)}
+      className={cn("bg-white py-20 sm:py-28 lg:py-36", className)}
       {...props}
     />
   );
