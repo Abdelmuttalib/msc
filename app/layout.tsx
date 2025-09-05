@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { DM_Sans, DM_Mono } from "next/font/google";
 import "./globals.css";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
-import { Footer, Header } from "@/components/layout/common";
+import { Footer } from "@/components/layout/common";
+import { JoinSection } from "@/components/common";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -67,10 +68,15 @@ export default function RootLayout({
       <body
         className={`${dmSans.variable} ${dmMono.variable} antialiased font-sans`}
       >
-        <div className="pb-20">{children}</div>
+        <div className="pb-20">
+          {children}
+
+          <JoinSection />
+        </div>
+
         <Footer />
       </body>
-      {/* <TailwindIndicator />  */}
+      <TailwindIndicator />
       {/* <AcceptCookies /> */}
     </html>
   );

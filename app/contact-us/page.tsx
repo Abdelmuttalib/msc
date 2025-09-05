@@ -1,4 +1,4 @@
-import { LogoText, Section, SectionTag } from "@/components/common";
+import { Section, SectionTag } from "@/components/common";
 import { PageContainer } from "@/components/page-container";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -52,7 +52,7 @@ function ContactUs() {
                       href: "/contact-us",
                       label: "Contact",
                     },
-                  ].map((link, i) => (
+                  ].map((link) => (
                     <Link key={link.label} href={link.href}>
                       {link.label}
                     </Link>
@@ -95,8 +95,8 @@ function ContactUs() {
                   <Typography variant="lg/normal" className="text-black">
                     Our team is here to support your sustainable goals. Whether
                     you have questions, need assistance, or want to collaborate,
-                    we're ready to help you take the next step toward a greener
-                    future Icon
+                    we&apos;re ready to help you take the next step toward a
+                    greener future Icon
                   </Typography>
                 </div>
 

@@ -1,11 +1,6 @@
-import { LogoText, Section, SectionTag } from "@/components/common";
+import { Section, SectionTag } from "@/components/common";
 import { PageContainer } from "@/components/page-container";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { Typography } from "@/components/ui/typography";
-import { MailIcon, MapPin, PhoneIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -50,7 +45,7 @@ function About() {
                       href: "/contact-us",
                       label: "Contact",
                     },
-                  ].map((link, i) => (
+                  ].map((link) => (
                     <Link key={link.label} href={link.href}>
                       {link.label}
                     </Link>
@@ -81,6 +76,7 @@ function About() {
         </div>
         {/* image */}
         <Section className="relative h-[90vh] bg-black">
+          {/* eslint-disable @next/next/no-img-element */}
           <img
             src="https://moroccan-solar-cells.com/wp-content/uploads/2025/01/13627641.jpeg"
             alt=""
@@ -129,7 +125,7 @@ function About() {
                     description:
                       "Phase 1 will create thousands of direct and indirect jobs, empowering local communities and building skilled expertise.",
                   },
-                ].map(({ value, title, description }, i) => (
+                ].map(({ value, title, description }) => (
                   <div key={title} className="bg-darkgreen p-6 grid gap-10">
                     <div className="">
                       <Typography
@@ -201,7 +197,7 @@ function About() {
                         "Cells are laminated into robust, durable, and powerful solar modules ready for global markets.",
                       img: "https://moroccan-solar-cells.com/wp-content/uploads/2024/02/3kxpy-2prl0-e1708698106933.jpg",
                     },
-                  ].map(({ step, title, description }, i) => (
+                  ].map(({ step, title, description }) => (
                     <div key={step} className="">
                       <div className="grid gap-2">
                         <div className="flex items-center gap-2">
@@ -244,6 +240,7 @@ function About() {
                         01
                       </Typography>
                     </div>
+                    {/* eslint-disable @next/next/no-img-element */}
                     <img
                       src="https://moroccan-solar-cells.com/wp-content/uploads/2024/02/add613f9-445e-4924-a817-e93fc34d4aa0-scaled-e1708698047702.jpg"
                       alt=""
@@ -259,6 +256,7 @@ function About() {
                         02
                       </Typography>
                     </div>
+                    {/* eslint-disable @next/next/no-img-element */}
                     <img
                       src="https://moroccan-solar-cells.com/wp-content/uploads/2024/02/312da068-5e78-4ef9-a923-562e8045cb60-e1708697943670.jpg"
                       alt=""
@@ -274,6 +272,7 @@ function About() {
                         03
                       </Typography>
                     </div>
+                    {/* eslint-disable @next/next/no-img-element */}
                     <img
                       src="https://moroccan-solar-cells.com/wp-content/uploads/2024/02/d15c0954-1aff-4081-a8cf-633c4b510dca-e1708697904572.jpg"
                       alt=""
@@ -289,6 +288,7 @@ function About() {
                         04
                       </Typography>
                     </div>
+                    {/* eslint-disable @next/next/no-img-element */}
                     <img
                       src="https://moroccan-solar-cells.com/wp-content/uploads/2024/02/3kxpy-2prl0-e1708698106933.jpg"
                       alt=""

@@ -3,7 +3,7 @@ import { PageContainer } from "@/components/page-container";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import { cn } from "@/lib/utils";
-import { CheckCircle2Icon, CheckIcon } from "lucide-react";
+import { CheckIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -57,6 +57,7 @@ function MSC() {
             </PageContainer>
           </div>
           <div className="absolute inset-0">
+            {/* eslint-disable @next/next/no-img-element */}
             <img
               src="https://images.unsplash.com/photo-1674168481499-983f0968a68f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               // src="https://images.unsplash.com/photo-1491677533189-49af044391ed?q=80&w=1746&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -156,6 +157,7 @@ function MSC() {
                         <div className="flex gap-4 items-center relative bg-darkgreen">
                           <div className="absolute w-full h-0.5 bg-lightgreen"></div>
                           <div className="z-10">
+                            {/* eslint-disable @next/next/no-img-element */}
                             <img
                               src="/images/H2GEMINI-ppt.webp"
                               alt=""
@@ -383,6 +385,7 @@ function MSC() {
               </div>
               <div className="col-span-5 lg:col-span-2">
                 <div className="bg-lightgreen">
+                  {/* eslint-disable @next/next/no-img-element */}
                   <img
                     src="https://images.unsplash.com/photo-1643826884444-7cf7fd46c69f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     // src="https://framerusercontent.com/images/axh6uBVzfcWemJ09UA0Xht6Wv8.jpg?scale-down-to=1024"
@@ -431,7 +434,7 @@ function MSC() {
                     description:
                       "BThe cells are laminated in strings to form a module, creating a resistant and powerful end product.",
                   },
-                ].map((j, i) => (
+                ].map((j) => (
                   <div
                     key={j.process}
                     className="relative col-span-1 bg-darkgreen items-center justify-center"
@@ -449,6 +452,7 @@ function MSC() {
                         <div key={i} className="bg-emerald-800"></div>
                       ))}
                     </div>
+                    {/* eslint-disable @next/next/no-img-element */}
                     <img src={j.img} alt="" className="w-full" />
                     <div className="p-4 xl:p-6 flex flex-col gap-2 text-white">
                       <Typography
@@ -496,7 +500,7 @@ function MSC() {
                           "High bifaciality and long lifespan",
                           "Lower levelised cost of energy (LCOE) compared to P-type cells",
                           "Competitive beyond Asia’s economies of scale",
-                        ].map((j, i) => (
+                        ].map((j) => (
                           <div key={j} className="bg-white flex flex-col">
                             <span className="size-6 bg-darkgreen inline-flex items-center justify-center text-white">
                               <CheckIcon className="w-5 h-5 text-lightgreen" />
@@ -526,6 +530,7 @@ function MSC() {
                 <div className="pt-8">
                   <div className="flex items-end justify-end">
                     <div className="aspect-square overflow-hidden bg-darkgreen p-2 outline-1 -outline-offset-1 outline-black/10">
+                      {/* eslint-disable @next/next/no-img-element */}
                       <img
                         src="https://images.unsplash.com/photo-1689561799161-7d5852ee10a5?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt=""
@@ -842,6 +847,7 @@ function MSC() {
                   ))}
                 </div>
                 <div className="bg-darkgreen order-first xl:order-last">
+                  {/* eslint-disable @next/next/no-img-element */}
                   <img
                     src="https://moroccan-solar-cells.com/wp-content/uploads/2025/01/13627641.jpeg"
                     // src="https://images.unsplash.com/photo-1643826884444-7cf7fd46c69f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -1002,7 +1008,7 @@ function MSC() {
                         <div className="absolute w-full h-0.5 bg-darkgreen rotate-45"></div>
                         <div className="absolute w-full h-0.5 bg-darkgreen -rotate-45"></div>
                       </div>
-
+                      {/* eslint-disable @next/next/no-img-element */}
                       <img
                         src={team.image}
                         alt=""
@@ -1031,64 +1037,6 @@ function MSC() {
               </div>
             </div>
           </PageContainer>
-        </Section>
-        <Section className="relative text-white bg-black py-72 sm:py-72 md:py-64 lg:py-72 xl:py-80">
-          <div className="absolute top-0 left-0 w-full h-full bg-white/50 grid grid-cols-10 grid-rows-8 gap-[0.5px]">
-            {Array.from({ length: 80 }).map((_, i) => (
-              <div key={i} className="bg-black"></div>
-            ))}
-          </div>
-          <img
-            // src="https://images.unsplash.com/photo-1643826884444-7cf7fd46c69f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            src="https://images.unsplash.com/photo-1474398777522-cabeb42e8132?q=80&w=2130&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            // src="https://images.unsplash.com/photo-1694327671697-730cc4c5b9e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            // src="https://images.unsplash.com/photo-1643826884444-7cf7fd46c69f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            // src="https://framerusercontent.com/images/I63aDOGkxJKmUUtuNtByyqTZAHU.jpg"
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover object-top opacity-70"
-          />
-          <div className="size-full absolute inset-0 flex items-center justify-center">
-            <PageContainer size="sm" className="flex flex-col gap-4">
-              <Typography
-                variant="6xl/medium"
-                className="text-white tracking-tighter"
-              >
-                Join the renewable energy innovation with{" "}
-                <span className="text-lightgreen">MSC</span>.
-              </Typography>
-              <Typography variant="lg/normal" className="text-white">
-                Discover sustainable solutions that reduce costs and
-                environmental impact. Take the first step today!
-              </Typography>
-
-              <div className="flex gap-2 text-white flex-wrap">
-                {[
-                  "Solar Energy",
-                  "Photovoltaics (PV)",
-                  "Renewable Innovation",
-                  "Sustainability",
-                  "Made in Morocco",
-                  "Future of Energy",
-                  "Crystallization & Wafering",
-                  "Global Expertise",
-                  "Local Impact",
-                ].map((j, i) => (
-                  <span
-                    key={`${j}${i}`}
-                    className="relative text-white px-2.5 py-1.5 backdrop-blur-xl border border-white/15"
-                  >
-                    {/* <div className="size-2.5 bg-lightgreen absolute bottom-0 right-0 inline-flex items-center justify-center text-xl text-white">
-                      <div className="absolute w-full h-px bg-darkgreen"></div>
-                      <div className="absolute w-full h-px bg-darkgreen rotate-90"></div>
-                      <div className="absolute w-full h-px bg-darkgreen rotate-45"></div>
-                      <div className="absolute w-full h-px bg-darkgreen -rotate-45"></div>
-                    </div> */}
-                    {j}
-                  </span>
-                ))}
-              </div>
-            </PageContainer>
-          </div>
         </Section>
       </div>
     </div>

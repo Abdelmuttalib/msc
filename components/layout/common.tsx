@@ -1,4 +1,5 @@
 import { PageContainer } from "@/components/page-container";
+import Link from "next/link";
 
 export function Header() {
   return (
@@ -46,11 +47,11 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-white">
       <PageContainer className="py-10 lg:py-28 pb-10 lg:pb-16 relative">
-        <h5 className="absolute bottom-0 right-0 text-[#a6ff79]/30 via-[#a6ff79]/40 w-full h-full z-10 text-[20rem] md:text-[26rem]">
+        <h5 className="absolute bottom-0 right-0 text-[#a6ff79]/30 via-[#a6ff79]/40 w-full h-full text-[20rem] md:text-[26rem]">
           MSC
         </h5>
-        <div className="md:flex md:justify-between">
-          <div className="mb-6 md:mb-0">
+        <div className="sm:flex sm:justify-between z-40">
+          <div className="mb-6 sm:mb-0">
             <p className="flex items-center text-3xl uppercase font-semibold tracking-tighter">
               MSC
               <span className="ml-2 text-xl font-medium tracking-tighter text-[#1d3d3e]/70">
@@ -59,6 +60,30 @@ export function Footer() {
             </p>
           </div>
           <div className="relative grid">
+            <nav className="flex items-center gap-6 text-darkgreen/60">
+              {[
+                {
+                  title: "Home",
+                  url: "/",
+                },
+                {
+                  title: "Contact",
+                  url: "/contact-us",
+                },
+                {
+                  title: "Team",
+                  url: "/team",
+                },
+                {
+                  title: "About",
+                  url: "/about-us",
+                },
+              ].map((item) => (
+                <Link key={item.title} href={item.url}>
+                  {item.title}
+                </Link>
+              ))}
+            </nav>
             {/* <div>
                   <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">
                     Resources
