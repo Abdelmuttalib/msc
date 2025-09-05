@@ -46,6 +46,12 @@
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
 
+  /*  */
+  /* #1d3d3e */
+  --color-darkgreen: var(--darkgreen);
+  /* #a6ff79 */
+  --color-lightgreen: var(--lightgreen);
+
   @keyframes accordion-down {
     from {
       height: 0;
@@ -98,6 +104,9 @@
   --sidebar-accent-foreground: hsl(240 5.9% 10%);
   --sidebar-border: hsl(220 13% 91%);
   --sidebar-ring: hsl(217.2 91.2% 59.8%);
+
+  --darkgreen: oklch(0.3361 0.0378 198.16);
+  --lightgreen: oklch(0.9152 0.1895 136.22);
 }
 
 .dark {
