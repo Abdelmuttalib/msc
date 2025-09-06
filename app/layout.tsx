@@ -4,6 +4,7 @@ import "./globals.css";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { Footer } from "@/components/layout/common";
 import { JoinSection } from "@/components/common";
+import { Analytics } from "@vercel/analytics/next";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -76,6 +77,7 @@ export default function RootLayout({
 
         <Footer />
       </body>
+      <Analytics />
       <TailwindIndicator />
       {/* <AcceptCookies /> */}
     </html>
