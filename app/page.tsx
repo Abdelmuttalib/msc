@@ -93,6 +93,14 @@ function MSC() {
                     Get Started
                   </Button>
                 </div> */}
+                <div>
+                  <Button
+                    className="rounded-none text-base py-4 px-6 backdrop-blur-lg"
+                    asChild
+                  >
+                    <Link href={"/#video"}>Watch Video</Link>
+                  </Button>
+                </div>
               </div>
             </PageContainer>
           </div>
@@ -253,13 +261,9 @@ function MSC() {
               </div> */}
               </div>
               <div>
-                <div className="col-span-5 lg:col-span-3">
+                {/* <div className="col-span-5 lg:col-span-3">
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 flex-wrap">
                     {[
-                      // {
-                      //   heading: "$240M",
-                      //   description: "Phase 1 investment by 2027",
-                      // },
                       {
                         heading: "$1.7B",
                         description: "Total planned investment by 2035",
@@ -268,10 +272,6 @@ function MSC() {
                         heading: "1.2 GW",
                         description: "Initial annual production capacity",
                       },
-                      // {
-                      //   heading: "10 GW",
-                      //   description: "Target capacity in medium term",
-                      // },
                       {
                         heading: ">24.8%",
                         description: "HJT cell efficiency achieved",
@@ -281,22 +281,12 @@ function MSC() {
                         description:
                           "Local manufacturing integration in Morocco",
                       },
-                      // {
-                      //   heading: "4,000+",
-                      //   description: "Jobs created in Phase 1",
-                      // },
-                      // {
-                      //   heading: "17,600+",
-                      //   description: "Jobs created by Phase 2 & 3 expansion",
-                      // },
+
                       {
                         heading: "1st in Africa, EU & MENA",
                         description: "Fully integrated PV production",
                       },
-                      // {
-                      //   heading: "300 mm / 230 mm",
-                      //   description: "Next-gen ingots and wafers sizes",
-                      // },
+
                       {
                         heading: "Global Exports",
                         description: "Serving EU, USA, India, Africa",
@@ -315,25 +305,178 @@ function MSC() {
                       </div>
                     ))}
                   </div>
-                  {/* <div className="bg-lightgreen">
-                  <img
-                    src="https://images.unsplash.com/photo-1643826884444-7cf7fd46c69f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    className="w-full"
-                  />
-                  <div className="p-6 flex flex-col gap-4">
-                    <LogoText />
-
-                    <p>
-                      At MSC, we are creating Morocco’s renewable future with
-                      world-class photovoltaic technology. Our production line
-                      delivers next-generation solar modules that are efficient,
-                      durable, and locally manufactured — supporting energy
-                      independence and sustainability.
-                    </p>
-                  </div>
                 </div> */}
+                <div className="col-span-5 lg:col-span-3 pt-4 lg:pt-10">
+                  <div>
+                    <div>
+                      <div className="flex flex-col gap-6">
+                        <Typography
+                          variant="4xl/medium"
+                          className="tracking-tighter"
+                        >
+                          MSC OASIS – Phase 1 (2025–2026)
+                        </Typography>
+
+                        <div className="flex gap-4 items-center relative">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 flex-wrap">
+                            {[
+                              {
+                                heading: "€240 Million",
+                                description: "Investment (2025–2026)",
+                              },
+                              {
+                                heading: "1.2 GW",
+                                description:
+                                  "Initial annual production capacity",
+                              },
+                              {
+                                heading: "1,000",
+                                description: "Direct skilled jobs",
+                              },
+                              {
+                                heading: "3,000",
+                                description: "Indirect jobs",
+                              },
+                              {
+                                heading: "€20 Million",
+                                description:
+                                  "Already invested in planning, technology studies & business plan",
+                              },
+                              {
+                                heading: "€54 Million",
+                                description:
+                                  "Secured in patents & IP to anchor innovation",
+                              },
+                              {
+                                heading: ">24.8%",
+                                description: "HJT cell efficiency achieved",
+                              },
+                              {
+                                heading: "76%+",
+                                description:
+                                  "Local manufacturing integration in Morocco",
+                              },
+                            ].map((s) => (
+                              <div key={s.heading} className="bg-darkgreen p-4">
+                                <Typography
+                                  variant="3xl/semibold"
+                                  className="text-lightgreen tracking-tight"
+                                >
+                                  {s.heading}
+                                </Typography>
+                                <Typography
+                                  variant="lg/normal"
+                                  className="text-white"
+                                >
+                                  {s.description}
+                                </Typography>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+            </div>
+          </PageContainer>
+        </Section>
+        {/* project overview */}
+
+        <Section id="oasis" className="">
+          <PageContainer className="flex flex-col gap-12 items-center">
+            <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-4">
+              <div className="col-span-5 lg:col-span-2">
+                <div className="flex flex-col gap-10">
+                  <SectionTag id="" className="">
+                    OASIS
+                  </SectionTag>
+
+                  <div className="flex flex-col gap-6">
+                    <Typography
+                      variant="5xl/medium"
+                      className="tracking-tighter"
+                    >
+                      MSC OASIS: Integrated PV Production for Morocco’s Energy
+                      Future
+                    </Typography>
+                    <Typography variant="lg/normal">
+                      MSC OASIS is more than a factory — it’s a flagship project
+                      designed to strengthen Morocco’s energy independence and
+                      global positioning in renewable energy.
+                    </Typography>
+                  </div>
+                </div>
+              </div>
+              <div className="col-span-5 lg:col-span-5">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 w-full text-left">
+                  {[
+                    {
+                      title: "Energy Security",
+                      description:
+                        "Reduce dependence on energy imports and secure supply",
+                    },
+                    {
+                      title: "Job Creation",
+                      description:
+                        "Reduce dependence on energy imports and secure supply",
+                    },
+                    {
+                      title: "Strategic Positioning",
+                      description:
+                        "Elevating Morocco as a renewable energy hub in Africa and globally",
+                    },
+
+                    {
+                      title: "Ecosystem Development",
+                      description:
+                        "Empowering suppliers, SMEs, and service providers",
+                    },
+                    {
+                      title: "Technology Transfer",
+                      description:
+                        "Bringing world-class H2GEMINI technology and expertise into Morocco",
+                    },
+                  ].map((j, i) => (
+                    <div
+                      key={j.title}
+                      className={cn(
+                        "relative p-4 bg-white border-b-2 border border-darkgreen/15 border-b-darkgreen flex flex-col gap-2"
+                      )}
+                    >
+                      <div className="size-6 bg-lightgreen/70 absolute top-0 right-0 inline-flex items-center justify-center text-xl text-white">
+                        <div className="absolute w-full h-0.5 bg-darkgreen"></div>
+                        <div className="absolute w-full h-0.5 bg-darkgreen rotate-90"></div>
+                        <div className="absolute w-full h-0.5 bg-darkgreen rotate-45"></div>
+                        <div className="absolute w-full h-0.5 bg-darkgreen -rotate-45"></div>
+                      </div>
+
+                      <div className="flex flex-col gap-2">
+                        <Typography
+                          className="text-darkgreen tracking-tight"
+                          variant="2xl/medium"
+                        >
+                          {/* {i + 1}.  */}
+                          {j.title}
+                        </Typography>
+                        <Typography
+                          className="text-darkgreen/70 tracking-tight"
+                          variant="lg/medium"
+                        >
+                          {j.description}
+                        </Typography>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* eslint-disable @next/next/no-img-element */}
+                {/* <img
+                  src="https://moroccan-solar-cells.com/wp-content/uploads/2025/01/13627641.jpeg"
+                  alt=""
+                  className="w-full"
+                /> */}
               </div>
             </div>
           </PageContainer>
@@ -539,6 +682,60 @@ function MSC() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </PageContainer>
+        </Section>
+        {/* Video */}
+        <Section id="video" className="">
+          <PageContainer className="flex flex-col gap-12 items-center">
+            <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-4">
+              <div className="col-span-5 lg:col-span-2">
+                <div className="flex flex-col gap-10">
+                  <SectionTag id="video" className="">
+                    Video
+                  </SectionTag>
+
+                  <div className="flex flex-col gap-6">
+                    <Typography
+                      variant="5xl/medium"
+                      className="tracking-tighter"
+                    >
+                      Inside the Technology
+                    </Typography>
+                    <Typography variant="lg/normal">
+                      See how MSC, in partnership with H2GEMINI, brings advanced
+                      solar technology to Morocco.
+                    </Typography>
+                  </div>
+                </div>
+              </div>
+              <div className="col-span-5 lg:col-span-5">
+                <div className="relative w-full h-full p-1 md:p-2.5 border border-black/10 rounded-lg overflow-hidden shadow-xl bg-white/20 backdrop-blur-xl">
+                  {/* <div className="absolute -inset-[var(--padding)] rounded-[calc(var(--radius)+var(--padding))] shadow-sm ring-1 ring-black/5 [--padding:theme(spacing.2)] bg-gray-100 -z-10"></div> */}
+                  {/* <img
+                    src="https://moroccan-solar-cells.com/wp-content/uploads/2025/01/13627641.jpeg"
+                    className="h-full rounded-md ring-1 ring-black/10 w-full"
+                  /> */}
+                  <video
+                    controls
+                    playsInline
+                    // poster="https://moroccan-solar-cells.com/wp-content/uploads/2025/01/13627641.jpeg" // optional thumbnail image
+                    className="w-full h-auto rounded-md ring-1 ring-black/10"
+                  >
+                    <source
+                      src="/videos/msc-h2gemini-video.mp4"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                {/* eslint-disable @next/next/no-img-element */}
+                {/* <img
+                  src="https://moroccan-solar-cells.com/wp-content/uploads/2025/01/13627641.jpeg"
+                  alt=""
+                  className="w-full"
+                /> */}
               </div>
             </div>
           </PageContainer>
@@ -856,6 +1053,79 @@ function MSC() {
                   />
                 </div>
               </div>
+            </div>
+          </PageContainer>
+        </Section>
+        {/*  */}
+        {/* Technology */}
+        <Section>
+          <PageContainer className="flex flex-col gap-12 items-center">
+            <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-5">
+              <div className="col-span-5 lg:col-span-5">
+                <div className="flex flex-col gap-10">
+                  <SectionTag id="technology" className="">
+                    Project
+                  </SectionTag>
+
+                  <div className="flex flex-col gap-6">
+                    <Typography
+                      variant="5xl/medium"
+                      className="tracking-tighter"
+                    >
+                      Project Status
+                    </Typography>
+
+                    <div>
+                      <div className="grid grid-cols-1 gap-2 md:gap-6 bg-white md:grid-cols-2 w-full text-left py-4 lg:grid-cols-3">
+                        {[
+                          "Dossier submitted to AMDIE (under review)",
+                          "Site secured: 17 hectares in Al Ouatia, Guelmim region (near Tan-Tan)",
+                          "Banking partners: Attijariwafa Bank (AFC), Bank Populaire (UPLINE)",
+                          "Investors & Offtakes: LOIs with MGH and US Holding",
+                          "Registration number: R6800/56",
+                        ].map((j) => (
+                          <div
+                            key={j}
+                            className="p-3 border border-darkgreen/30 flex gap-2 bg-lightgreen/10"
+                          >
+                            <div className="flex gap-2">
+                              <span className="size-6 h-5 bg-darkgreen flex items-center justify-center text-white mt-1">
+                                <CheckIcon className="w-5 h-4 text-lightgreen" />
+                              </span>
+                              <Typography
+                                as="span"
+                                variant="xl/medium"
+                                className="text-darkgreen"
+                              >
+                                {j}
+                              </Typography>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* <div>
+                    <Button className="rounded-none text-base py-4 px-6">
+                      Get Started
+                    </Button>
+                  </div> */}
+                </div>
+              </div>
+              {/* <div className="col-span-5 lg:col-span-2">
+                <div className="pt-8">
+                  <div className="flex items-end justify-end">
+                    <div className="aspect-square overflow-hidden bg-darkgreen p-2 outline-1 -outline-offset-1 outline-black/10">
+                      <img
+                        src="https://images.unsplash.com/photo-1689561799161-7d5852ee10a5?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt=""
+                        className="block size-full object-cover border-2 border-lightgreen"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div> */}
             </div>
           </PageContainer>
         </Section>
