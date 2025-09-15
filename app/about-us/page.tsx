@@ -1,6 +1,7 @@
 import { Section, SectionTag } from "@/components/common";
 import { PageContainer } from "@/components/page-container";
 import { Typography } from "@/components/ui/typography";
+import { pageNavLinks } from "@/lib/site-config";
 import Link from "next/link";
 
 export default function Home() {
@@ -32,20 +33,7 @@ function About() {
               </div>
               <div className="text-black hidden sm:flex sm:items-center">
                 <nav className="flex items-center gap-6">
-                  {[
-                    {
-                      href: "#about",
-                      label: "About",
-                    },
-                    {
-                      href: "#team",
-                      label: "Team",
-                    },
-                    {
-                      href: "/contact-us",
-                      label: "Contact",
-                    },
-                  ].map((link) => (
+                  {pageNavLinks.map((link) => (
                     <Link key={link.label} href={link.href}>
                       {link.label}
                     </Link>
@@ -64,7 +52,7 @@ function About() {
                 <SectionTag>About</SectionTag>
                 <Typography
                   variant="7xl/medium"
-                  className="text-darkgreen tracking-[-0.3rem]"
+                  className="text-darkgreen tracking-tighter"
                 >
                   Driven by innovation,
                   <br />

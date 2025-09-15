@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Typography } from "@/components/ui/typography";
+import { pageNavLinks } from "@/lib/site-config";
 import { MailIcon, MapPin, PhoneIcon } from "lucide-react";
 import Link from "next/link";
 
@@ -39,20 +40,7 @@ function ContactUs() {
               </div>
               <div className="text-black hidden sm:flex sm:items-center">
                 <nav className="flex items-center gap-6">
-                  {[
-                    {
-                      href: "/about-us",
-                      label: "About",
-                    },
-                    {
-                      href: "/team",
-                      label: "Team",
-                    },
-                    {
-                      href: "/contact-us",
-                      label: "Contact",
-                    },
-                  ].map((link) => (
+                  {pageNavLinks.map((link) => (
                     <Link key={link.label} href={link.href}>
                       {link.label}
                     </Link>

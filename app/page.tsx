@@ -438,7 +438,7 @@ function MSC() {
                       description:
                         "Bringing world-class H2GEMINI technology and expertise into Morocco",
                     },
-                  ].map((j, i) => (
+                  ].map((j) => (
                     <div
                       key={j.title}
                       className={cn(
@@ -471,7 +471,6 @@ function MSC() {
                   ))}
                 </div>
 
-                {/* eslint-disable @next/next/no-img-element */}
                 {/* <img
                   src="https://moroccan-solar-cells.com/wp-content/uploads/2025/01/13627641.jpeg"
                   alt=""
@@ -686,6 +685,135 @@ function MSC() {
             </div>
           </PageContainer>
         </Section>
+        {/* product */}
+        {/* Technology */}
+        <Section id="product" className="">
+          <PageContainer className="flex flex-col gap-12 items-center">
+            <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-8">
+              <div className="col-span-5 lg:col-span-4">
+                <div className="flex flex-col gap-10 pt-8">
+                  <div className="flex flex-col gap-6">
+                    <SectionTag id="value" className="">
+                      Product
+                    </SectionTag>
+                    <Typography
+                      variant="5xl/medium"
+                      className="tracking-tighter"
+                    >
+                      Our Flagship Module
+                    </Typography>
+                    <Typography variant="lg/normal">
+                      The MSC GEMINI 710–730W bifacial HJT module combines
+                      ultra-high efficiency, desert-proof durability, and a
+                      40-year guarantee — built for Morocco and beyond.
+                      <br />
+                      <br />
+                      Ultra-high efficiency. Proven durability. Designed for
+                      Morocco & the world.
+                    </Typography>
+                    <div className="flex flex-col gap-10">
+                      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 w-full text-left py-2 lg:grid-cols-1">
+                        {[
+                          "710–730W Power Range",
+                          "23.5% Efficiency",
+                          "40-Year Guarantee",
+                          "Desert-Proven Reliability",
+                        ].map((j) => (
+                          <div
+                            key={j}
+                            className={cn(
+                              "relative p-4 bg-white border-b-2 border border-darkgreen/15 border-b-darkgreen flex flex-col gap-2"
+                            )}
+                          >
+                            <div className="size-6 bg-lightgreen/70 absolute top-0 right-0 inline-flex items-center justify-center text-xl text-white">
+                              <div className="absolute w-full h-0.5 bg-darkgreen"></div>
+                              <div className="absolute w-full h-0.5 bg-darkgreen rotate-90"></div>
+                              <div className="absolute w-full h-0.5 bg-darkgreen rotate-45"></div>
+                              <div className="absolute w-full h-0.5 bg-darkgreen -rotate-45"></div>
+                            </div>
+
+                            <div className="flex flex-col gap-2">
+                              <Typography
+                                className="text-darkgreen tracking-tight"
+                                variant="2xl/medium"
+                              >
+                                {/* {i + 1}.  */}
+                                {j}
+                              </Typography>
+                              {/* <Typography
+                                className="text-darkgreen/70 tracking-tight"
+                                variant="lg/medium"
+                              >
+                                {j}
+                              </Typography> */}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full text-left py-2 lg:grid-cols-1">
+                        {[
+                          "710–730W Power Range",
+                          "23.5% Efficiency",
+                          "40-Year Guarantee",
+                          "Desert-Proven Reliability",
+                        ].map((j, i) => (
+                          <div
+                            key={j}
+                            className="bg-darkgreen border relative grid grid-cols-8"
+                          >
+                            <div
+                              className={cn(
+                                "col-span-8 p-2 lg:p-3 bg-darkgreen",
+                                {
+                                  "": i % 2 === 1,
+                                }
+                              )}
+                            >
+                              <Typography
+                                variant="xl/semibold"
+                                className="text-white tracking-tight"
+                              >
+                                {j}
+                              </Typography>
+                            </div>
+                          </div>
+                        ))}
+                      </div> */}
+                      <div>
+                        <Button
+                          className="rounded-none text-base py-5 px-6 bg-lightgreen text-darkgreen hover:bg-lightgreen/90"
+                          asChild
+                        >
+                          <Link href="/product">View Product</Link>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* <div>
+                    <Button className="rounded-none text-base py-4 px-6">
+                      Get Started
+                    </Button>
+                  </div> */}
+                </div>
+              </div>
+              <div className="col-span-5 lg:col-span-4">
+                <div className="">
+                  <div className="flex items-end justify-end">
+                    <div className="overflow-hidden">
+                      {/* eslint-disable @next/next/no-img-element */}
+                      <img
+                        src="/images/PVModuleHJT.png"
+                        alt=""
+                        className="block size-full object-contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </PageContainer>
+        </Section>
         {/* Video */}
         <Section id="video" className="">
           <PageContainer className="flex flex-col gap-12 items-center">
@@ -730,7 +858,6 @@ function MSC() {
                     Your browser does not support the video tag.
                   </video>
                 </div>
-                {/* eslint-disable @next/next/no-img-element */}
                 {/* <img
                   src="https://moroccan-solar-cells.com/wp-content/uploads/2025/01/13627641.jpeg"
                   alt=""

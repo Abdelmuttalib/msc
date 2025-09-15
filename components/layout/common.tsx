@@ -54,17 +54,21 @@ export function Footer() {
           <div className="mb-6 sm:mb-0">
             <p className="flex items-center text-3xl uppercase font-semibold tracking-tighter">
               MSC
-              <span className="ml-2 text-xl font-medium tracking-tighter text-[#1d3d3e]/70">
+              <span className="ml-2 text-xl sm:text-base font-medium tracking-tighter text-[#1d3d3e]/70">
                 Moroccan Solar Cells
               </span>
             </p>
           </div>
           <div className="relative grid">
-            <nav className="flex items-center gap-6 text-darkgreen/60">
+            <nav className="flex items-center gap-6 sm:gap-4 md:gap-8 text-darkgreen/60">
               {[
                 {
                   title: "Home",
                   url: "/",
+                },
+                {
+                  title: "Product",
+                  url: "/product",
                 },
                 {
                   title: "Contact",
